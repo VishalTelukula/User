@@ -28,13 +28,12 @@ public class UserServiceTest {
         sampleUser.setId(1L);
         sampleUser.setfName("Vishal blah blah");
         sampleUser.setlName("Telukula");
-        sampleUser.setEmail("vishal@example.com");
     }
     @Test
     public void getAllUsersTest(){
        mockito.when(userRepository.findAll()).thenReturn(List.of(sampleUser));
         List<User> users = userService.getAllUsers();
-        assertEquals("Vishal",users.get(0).getfName());
+        assertEquals("Vishal blah blah",users.get(0).getfName());
     }
 
 }
