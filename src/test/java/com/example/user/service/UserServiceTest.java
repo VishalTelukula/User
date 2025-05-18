@@ -26,7 +26,7 @@ public class UserServiceTest {
         MockitoAnnotations.openMocks(this);
         sampleUser = new User();
         sampleUser.setId(1L);
-        sampleUser.setfName("Vishal");
+        sampleUser.setfName("Vishal blah blah");
         sampleUser.setlName("Telukula");
         sampleUser.setEmail("vishal@example.com");
     }
