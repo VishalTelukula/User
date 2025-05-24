@@ -10,7 +10,18 @@ type Query {
     getAllUsers: [User]
     getUser(id: ID!): User
 }
+""" queries : used to fetch data from the server
+       similar to the GET method in REST
+       query for queryin data
+         SELECT operations
+
+     mutation is for modifying the data
+         similar to POST, PUT, DELETE in REST
+         mutation for modifying data
+            INSERT, UPDATE, DELETE operations
+"""
 
 type Mutation {
     createUser(fName: String, lName: String, email: String): User
+    deleteUser(id:ID!) : String
 }

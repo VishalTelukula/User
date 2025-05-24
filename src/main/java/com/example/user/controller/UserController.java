@@ -37,5 +37,9 @@ public class UserController {
         user.setEmail(email);
         return userService.createUser(user);
     }
+    @MutationMapping
+    public void deleteUser(@Argument Long id){
+        userService.deleteUser(id);
+    }
 
 }

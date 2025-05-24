@@ -26,4 +26,13 @@ public class UserService {
     public User createUser(User user) {
         return userRepository.save(user);
     }
+    public String deleteUser(Long id) {
+        Optional<User> user = userRepository.findById(id);
+        if (user.isPresent()) {
+            userRepository.deleteById(id);
+            return "User deleted successfully";
+        } else {
+            return "User not found";
+        }
+    }
 }
